@@ -1,3 +1,116 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #3aaf80;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-rows: 1fr 0.3fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.text{
+    align-items: center;
+    justify-content: center;
+}
+
+.imp_text{
+    color: #ffffff;
+    font-family: 'Carter One', cursive;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-align:center;
+    
+    text-shadow: 2px 3px #172a29;
+}
+
+.sub_imp_text{
+    color: #172a29;
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align:center;
+    
+    text-shadow: 1px 0px #ffffff;
+}
+
+.info{
+    color: #172a29;
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    text-align: center;
+    width: 800px;
+    
+    padding-top:25px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color:#ffffff;
+    text-align: center;
+    border-radius: 60px 60px 0px 0px;
+    
+    padding:2px;
+    font-family: 'Raleway';
+}
+
+#big_button{
+    /* Button Styling */
+    background-color:#d18f19;
+    border-radius: 12px;
+    width: 460px;
+    height: 73px;
+    border: none;
+    box-shadow: -5px 2px;
+    
+    /*Font Styling*/
+    font-family: 'Raleway';
+    font-style: italic; 
+    font-variant: small-caps; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    font-size: 24px;
+    letter-spacing: 3.12px;
+    color: #def2ea;
+    text-align: center;
+    
+    /* Button Animation */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#big_button:hover{
+    /* Button Styling */
+    background-color:#a36f13;
+    border-radius: 12px;
+    width: 460px;
+    height: 73px;
+    border:none;
+    
+    /*Font Styling*/
+    font-family: 'Raleway';
+    font-style: italic; 
+    font-variant: small-caps; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    font-size: 24px;
+    letter-spacing: 3.12px;
+    color: #dbdbdb;
+    text-align: center;
+    
+}
+
