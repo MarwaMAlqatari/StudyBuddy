@@ -5,7 +5,7 @@ class CreateBuddies < ActiveRecord::Migration[5.2]
       t.string :lname
       t.string :email
       t.string :gender
-      t.string :class
+      t.string :class_name
       t.string :class_num
       t.string :section_num
       t.string :topic_1212
