@@ -1,146 +1,58 @@
 <h1>New Buddy</h1>
-<%= form_for :buddy, url: buddies_path do |f| %>
-  <head>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="jquery.weekly-schedule-plugin.min.js"></script>
-</head>
 
-<body>
-	<form>
+	<%= form_for :buddy, url: buddies_path do |f| %>
+	
+	    <p>
+	    	<%= f.label :fname %><br>
+	    	<%= f.text_field :fname %>
+	    </p>
 	    
-		<label for="fname">First Name</label>
-		<input type="text" id="fname" name="firstname" required>
-
-		<br>
-		<!-- Label and input for last name -->
-		<label for="lname">Last Name</label>
-		<input type="text" id="lname" name="lastname" required>
-
-		<br>
-		<!-- Label and input for email address-->
-		<label for="email">Email</label>
-		<input type="email" id="email" name="email_add" required>
-
-		<br>
-		<!--  Label and input for gender -->
-		<label for="gender">Gender</label>
-		<select name="gender">
-			<option value="Male">Male</option>
-			<option value="Female">Female</option>
-			<option value="Other">Other</option>
-		</select>
-		<br>
-
-		<h1>Enter information about your class</h1>
-		<label for="class">Class</label>
-		<select name="Subject">
-			<option value="ITSC">ITSC</option>
-			<option value="Something else">Something Else</option>
-		</select>
-		<br>
-
-		<select name="class_num">
-			<option value="1212">1212</option>
-			<option value="1213">1213</option>
-		</select>
-
-		<select name="section_num">
-			<option value="101">101</option>
-		</select>
-
-		<p>Please, enter information about your class</p>
-		<select name="topic_1212">
-			<option>Access modifiers (public, private, etc.)</option>
-			<option>Arithmetic expressions</option>
-			<option>Arrays</option>
-			<option>Binary</option>
-			<option>Binary Search</option>
-			<option>Boolean expressions, logic and sort</option>
-			<option>Class structure/object instantiation</option>
-			<option>Commenting code</option>
-			<option>Constructors</option>
-			<option>Data types</option>
-			<option>Decimal</option>
-			<option>Do while loops</option>
-			<option>Flowcharts</option>
-			<option>For loops</option>
-			<option>If and if/else statements</option>
-			<option>Hexadecimal</option>
-			<option>Instantiating an object</option>
-			<option>Method calling</option>
-			<option>Method classification (main, static, void, etc)</option>
-			<option>Method overloading</option>
-			<option>Method parameters</option>
-			<option>Method return type</option>
-			<option>Method signature</option>
-			<option>Method writing</option>
-			<option>Modulus operator</option>
-			<option>Nested loops</option>
-			<option>Number system conversion</option>
-			<option>Passing objects as method parameters</option>
-			<option>Random numbers</option>
-			<option>Relational operators</option>
-			<option>Scanner methods (nextLine, nextInt)</option>
-			<option>Scanner</option>
-			<option>Static fields/methods</option>
-			<option>Static modifier</option>
-			<option>String methods</option>
-			<option>Switch</option>
-			<option>Typecasting</option>
-			<option>Validating input</option>
-			<option>Variable assignment/declaration, scope, swapping</option>
-			<option>While loops</option>
-		</select>
-
-		<div class="container" style="margin: auto; width: 50%; height: 100%; display: flex; flex-direction: row; justify-content: center;">
-			<div id="target">
-			</div>
-		</div>
-
-		<div>
-			<button type="button" id="button1">Click Me To GET SELECTED HRS</button>
-		</div>
+	    <p>
+	    	<%= f.label :lname %><br>
+	    	<%= f.text_area :lname %>
+	    </p>
+	    
+	     <p>
+            <%= f.label :email %><br>
+            <%= f.text_area :email %>
+         </p>
+         
+         <p>
+        	<%= f.label :gender %><br>
+        	<%= f.select :gender, ['Male', 'Female', 'Other'] %>
+        </p>
+        
+        <p>
+	        <%= f.label :class %><br>
+        	<%= f.select :class, ['ITSC'] %>
+        </p>
+        
+            <%= f.label :class_num %> <br>
+            <%= f.select :class_num, ['1212'] %> 
+        
+        <p>
+        	<%= f.label :section_num %><br>
+        	<%= f.select :section_num, ['101', '123', '140', '151'] %> <br>
+        </p>
+        
+        <p>
+        	
+        	<%= f.label :topic_1212 %><br>
+        	<%= f.select :topic_1212, ['Accessors', 'Expressions', 'Arrays', 
+			             'Boolean', 'Class Structure', 'Loops', 'Flowcharts',
+				     'Method calling', 'Scanner and Random generators', 'Switch', 'String methods', 'Method classification (main, static, void, etc)' ] %> <br>
+        </p>
+        
+        <p>
+            <%= f.label :comment %><br>
+            <%= f.text_area :comment %>
+         </p>
 
 
-		<script>
-			var mySettings = {
-				fontFamily: 'Raleway', // Font used in the component
-				fontColor: "black", // Font colot used in the component
-				fontWeight: "100", // Font weight used in the component
-				fontSize: "0.8em", // Font size used in the component
-				hoverColor: "#409952",
-				selectionColor: "#4bcc65"
-			}
 
-			$('#target').weekly_schedule(mySettings);
+	    <p>
+	    	<%= f.submit %>
+	    </p>
+	    
 
-			$("#button1").click(function() {
-				var smth = $('#target').weekly_schedule("getSelectedHour");
-				console.log(smth);
-			});
-
-		</script>
-
-
-		<br>
-		<label for="comment">Message to your potential buddy</label>
-		<textarea name="comment" rows="10" cols="30"> </textarea>
-
-		<br>
-
-		<input type="submit" id="submit">
-
-		<script>
-			$("#submit").click(function() {
-				var smth = $('#target').weekly_schedule("getSelectedHour");
-				console.log(smth);
-			});
-
-		</script>
-
-	</form>
-
-
-</body>
-
-<% end %>
+	<% end %>
