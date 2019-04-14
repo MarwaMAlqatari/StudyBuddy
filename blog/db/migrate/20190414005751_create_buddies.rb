@@ -9,6 +9,8 @@ class CreateBuddies < ActiveRecord::Migration[5.2]
       t.string :class_num
       t.string :section_num
       t.string :topic_1212
+      t.string :availability
+      t.string :time
       t.text :comment
 
       t.timestamps
