@@ -7,9 +7,21 @@ class BuddiesController < ApplicationController
     end
     
     def new
-        
+        @buddy = Buddy.new
+    end
+    def edit
+        @buddy = Buddy.find(params[:id])
     end
     
+    def update
+  @buddy = Buddy.find(params[:id])
+     if @buddy.update(buddy_params)
+    redirect_to @buddy
+    else
+    render 'edit'
+     end
+    end
+
     def create
         @buddy = Buddy.new(buddy_params)
         
