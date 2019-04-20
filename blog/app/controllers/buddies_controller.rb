@@ -21,6 +21,12 @@ class BuddiesController < ApplicationController
     render 'edit'
      end
     end
+    
+    def destroy
+  @buddy = Buddy.find(params[:id])
+  @buddy.destroy
+  redirect_to buddies_path
+    end
 
     def create
         @buddy = Buddy.new(buddy_params)

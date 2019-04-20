@@ -16,6 +16,10 @@
       <td><%= buddy.comment %></td>
       <td><%= link_to 'Show', buddy_path(buddy) %></td>
       <td><%= link_to 'Edit', edit_buddy_path(buddy) %></td>
+      <td><%= link_to 'Destroy',
+                             buddy_path(buddy),
+                             method: :delete,
+                             data: { confirm: 'Are you sure? :(' } %></td>
     </tr>
   <% end %>
 </table>
