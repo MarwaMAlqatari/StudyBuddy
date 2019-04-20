@@ -1,0 +1,18 @@
+<h1>Listing Buddies</h1>
+ 
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Comment</th>
+  </tr>
+ 
+  <% @buddies.each do |buddy| %>
+    <tr>
+      <td><%= buddy.fname %></td>
+      <td><%= buddy.lname %></td>
+      <td><%= buddy.comment %></td>
+      <td><%= link_to 'Show', buddy_path(buddy) %></td>
+    </tr>
+  <% end %>
+</table>
