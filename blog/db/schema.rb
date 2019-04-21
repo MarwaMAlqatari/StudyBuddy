@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_193628) do
+ActiveRecord::Schema.define(version: 2019_04_14_005751) do
 
   create_table "buddies", force: :cascade do |t|
     t.string "fname"
@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(version: 2019_04_14_193628) do
     t.string "class_num"
     t.string "section_num"
     t.string "topic_1212"
+    t.string "availability"
+    t.string "time"
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "availability"
-    t.string "time"
   end
 
 end

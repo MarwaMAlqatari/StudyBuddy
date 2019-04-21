@@ -1,4 +1,5 @@
-<h1>Editing buddy</h1>
+<div class="new_wrapper">
+<h1>Make changes to Buddy porfile</h1>
  
 <%= form_for :buddy, url: buddy_path(@buddy), method: :patch do |f| %>
  
@@ -16,60 +17,93 @@
     </div>
   <% end %>
  
-  <p>
-    <%= f.label :fname %><br>
-    <%= f.text_field :fname %>
-  </p>
- 
-  <p>
-    <%= f.label :lname %><br>
-    <%= f.text_area :lname %>
-  </p>
+ <p class="imp">Make changes to your personal information:</p>
+   <div class="section">
+	   <p>
+	    <%= f.label :fname, 'First Name' %><br>
+	    <%= f.text_field :fname %>
+	   </p>
+	   
+	    <p>
+	    	<%= f.label :lname, 'Last Name' %><br>
+	    	<%= f.text_area :lname %>
+	    </p>
+	    
+	     <p>
+            <%= f.label :email %><br>
+            <%= f.text_area :email %>
+         </p>
+         
+         <p>
+        	<%= f.label :gender %><br>
+        	<%= f.select :gender, ['Male', 'Female', 'Other'] %>
+        </p>
+        </div>
+        
+        <br>
   
-    <p>
-    <%= f.label :email %><br>
-    <%= f.text_area :email %>
-  </p>
+  <br> 
+  <p class="imp">Make changes to information about your class</p>
   
-    <p>
-    <%= f.label :gender %><br>
-    <%= f.text_area :gender %>
-  </p>
-  
-    <p>
-    <%= f.label :class_name %><br>
-    <%= f.text_area :class_name %>
-  </p>
-  
-    <p>
-    <%= f.label :class_num %><br>
-    <%= f.text_area :class_num %>
-  </p>
-  
-    <p>
-    <%= f.label :section_num %><br>
-    <%= f.text_area :section_num %>
-  </p>
-  
-     <p>
-    <%= f.label :topic_1212 %><br>
-    <%= f.text_area :topic_1212 %>
-  </p>
-  
-     <p>
-    <%= f.label :availability %><br>
-    <%= f.text_area :availability %>
-  </p>
-  
-    <p>
-    <%= f.label :time %><br>
-    <%= f.text_area :time %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
- 
-<% end %>
- 
-<%= link_to 'Back', buddies_path %>
+   <div class="section">
+        <p>
+	        <%= f.label :class_name, 'Choose name and number of your class' %><br>
+        	<%= f.select :class_name, ['ITSC'] %>
+        </p>
+        
+        <p>
+            <%= f.label :class_num %> <br>
+            <%= f.select :class_num, ['1212'] %> 
+        </p>
+        
+        <p>
+        	<%= f.label :section_num, 'Please, choose section of your class' %><br>
+        	<%= f.select :section_num, ['101', '123', '140', '151'] %> <br>
+        </p>
+        
+        <p>
+        	
+        	<%= f.label :topic_1212, 'What topic you would like to learn about?' %><br>
+        	<%= f.select :topic_1212, ['Accessors', 'Expressions', 'Arrays', 
+			             'Boolean', 'Class Structure', 'Loops', 'Flowcharts',
+				     'Method calling', 'Scanner and Random generators', 'Switch', 'String methods', 'Method classification (main, static, void, etc)' ] %> <br>
+        </p>
+        </div>
+        
+     <br>
+        <p class="imp">Make changes to information about your availability</p>
+        <div class="section">
+         <p>
+            <%= f.label :availability, "Choose the best day you'll be available to study" %><br>
+            <%= f.select :availability, ['Monday', 'Tuesday', 'Wednesday', 
+			             'Thursday', 'Friday', 'Saturday','Sunday' ] %> <br>
+         </p>
+         
+        <p>
+            <%= f.label :time, "Choose the best time" %><br>
+            <%= f.select :time, ['7:00AM-8:00AM', '8:00AM-9:00AM', '9:00AM-10:00AM', 
+			             '10:00AM-11:00AM', '11:00AM-12:00AM', '12:00AM-1:00PM','1:00PM-2:00PM','2:00PM-3:00PM', '3:00PM-4:00PM', '4:00PM-5:00PM', 
+			             '5:00PM-6:00PM', '6:00PM-7:00PM', '7:00PM-8:00PM','8:00PM-9:00PM' ] %> <br>
+         </p>
+        
+        <p>
+            <%= f.label :comment, "Leave comment to your potential studdy buddy!" %><br>
+            <%= f.text_area :comment %>
+         </p>
+        </div>
+
+
+	    <div id="placement">
+	    	<%= f.submit  %>
+	    </div>
+	    
+
+	  <% end %>
+  	<div id="back">
+	  <%= link_to 'Back', buddies_path %>
+	  </div>
+	
+	<div id="footer">
+            <p>Created by Sahiti Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>
+    </div>
+</div>
