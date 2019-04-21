@@ -149,7 +149,7 @@ select{
 }
 
 #back a{
-    font-family: 'Raleway Black', sans-serif;;
+    font-family: 'Raleway Black', sans-serif;
     font-size: 30px;
     font-style:oblique;
     letter-spacing: 2px;
@@ -251,4 +251,88 @@ table {
 
 .w{
     width:400px;
+}
+
+table a{
+    color: #b8860b;
+    font-style:oblique;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+table a:hover{
+    color: #b8860b;
+    font-style:oblique;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+//FOR SHOWING ALREADY-EXISTING BUDDY
+.show_wrapper>h1{
+    color: #ffffff;
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-align:center;
+    
+    text-shadow: 2px 3px #172a29;
+}
+
+#about_buddy {
+    background:#ffffff;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+strong{
+    margin-left:15px;
+    padding: 12px 7px 0px 25px;
+    font-family: 'Raleway';
+    font-size: 20px;
+    text-align: right;
+    font-style: oblique;
+    letter-spacing: 1px;
+}
+
+.show_wrapper p{
+    font-family:'Roboto', sans-serif;
+    font-size:19px;
+}
+
+strong, p{
+    padding-top:5px;
+    padding-bottom:4px;
+}
+
+.show_wrapper #list {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: auto;
+    
+    margin-top: -20%;
+}
+
+.show_wrapper a{
+    font-family: 'Raleway Black', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    padding-bottom: 2px;
+    font-style: oblique;
+    
+    color: #42594a;
+}
+
+.show_wrapper a:hover{
+    font-family: 'Raleway Black', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    padding-bottom: 2px;
+    font-style: oblique;
+    
+    color: #42594a;
+    text-shadow: -2.5px 0px #b4c1b7;
 }

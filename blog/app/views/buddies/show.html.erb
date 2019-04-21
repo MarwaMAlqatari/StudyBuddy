@@ -1,47 +1,85 @@
-<div
+<div class="show_wrapper">
 <h1>Information about Studdy Buddy!</h1>
+<div id="about_buddy">
+<br>
 <p>
     <strong>First Name:</strong>
     <%= @buddy.fname %>
 </p>
+<br>
+
 <p>
     <strong>Last Name:</strong>
     <%= @buddy.lname %>
 </p>
+<br>
+
 <p>
     <strong>Email:</strong>
     <%= @buddy.email %>
 </p>
+<br>
+
 <p>
     <strong>Gender:</strong>
     <%= @buddy.gender %>
 </p>
+<br>
+
 <p>
     <strong>Class:</strong>
     <%= @buddy.class_name %>
 </p>
+<br>
+
 <p>
     <strong>Class number:</strong>
     <%= @buddy.class_num %>
 </p>
+<br>
+
 <p>
     <strong>Section number:</strong>
     <%= @buddy.section_num %>
 </p>
+<br>
+
 <p>
     <strong>Topic:</strong>
     <%= @buddy.topic_1212 %>
 </p>
+<br>
+
 <p>
     <strong>Availability:</strong>
     <%= @buddy.availability %>
 </p>
+<br>
+
 <p>
     <strong>Time:</strong>
     <%= @buddy.time %>
 </p>
+<br>
+
 <p>
     <strong>Comment:</strong>
     <%= @buddy.comment %>
 </p>
-<%= link_to 'Listing Buddies', buddies_path %>
+<br>
+</div>
+
+<div id="list">
+    <%= link_to 'Listing Buddies', buddies_path %>
+    <br>
+    <br>
+    <%= link_to 'Edit', edit_buddy_path(@buddy) %>
+</div>
+
+
+
+</div>
+
+<!--<div id="footer">-->
+<!--            <p>Created by Sahiti Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>-->
+<!--</div>-->
