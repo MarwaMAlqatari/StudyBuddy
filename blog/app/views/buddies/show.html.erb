@@ -69,8 +69,8 @@
 <br>
 </div>
 
-
-<h2>Responses</h2>
+<div id="post">
+<h2>Posts</h2>
 <% @buddy.responses.each do |response| %>
   <p>
     <strong>Responder:</strong>
@@ -83,7 +83,7 @@
   </p>
 <% end %>
 
-<h2>Add a comment:</h2>
+<p class="imp_comm">Add a comment:</p>
 <%= form_for([@buddy, @buddy.responses.build]) do |f| %>
   <p>
     <%= f.label :responder %><br>
@@ -93,11 +93,11 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </p>
-  <p>
+  <div id="sub">
     <%= f.submit %>
-  </p>
+  </div>
 <% end %>
-
+</div>
 
 
 
