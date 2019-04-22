@@ -69,6 +69,39 @@
 <br>
 </div>
 
+
+<h2>Responses</h2>
+<% @buddy.responses.each do |response| %>
+  <p>
+    <strong>Responder:</strong>
+    <%= response.responder %>
+  </p>
+ 
+  <p>
+    <strong>Response:</strong>
+    <%= response.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@buddy, @buddy.responses.build]) do |f| %>
+  <p>
+    <%= f.label :responder %><br>
+    <%= f.text_field :responder %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+
+
+
 <div id="list">
     <%= link_to 'Listing Buddies', buddies_path %>
     <br>
@@ -81,5 +114,5 @@
 </div>
 
 <!--<div id="footer">-->
-<!--            <p>Created by Sahiti Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>-->
+<!--            <p>Created by Sahithi Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>-->
 <!--</div>-->

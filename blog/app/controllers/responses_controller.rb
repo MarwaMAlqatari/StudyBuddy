@@ -7,7 +7,8 @@ class ResponsesController < ApplicationController
     
     private
         def response_params
-            params.require(:response).permit(:commenter, :body)
+            params.require(:response).permit(:responder, :body)
         end
-
+            
+    
 end
