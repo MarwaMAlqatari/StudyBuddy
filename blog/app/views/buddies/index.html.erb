@@ -1,6 +1,11 @@
-<h1>Listing Buddies</h1>
+<div class="list_wrapper">
+<h1>List of Study Buddies</h1>
 
+<div id="create_link">
+<p>Would you like to create</p>
 <%= link_to 'New buddy', new_buddy_path %>
+<p>???</p>
+</div>
  
 <table>
   <tr>
@@ -9,7 +14,7 @@
     <th>Class#</th>
     <th>Section</th>
     <th>Topic</th>
-    <th>Comment</th>
+    <th class="w">Comment</th>
   </tr>
  
   <% @buddies.each do |buddy| %>
@@ -19,13 +24,19 @@
       <td><%= buddy.class_num %></td>
       <td><%= buddy.section_num %></td>
       <td><%= buddy.topic_1212 %></td>
-      <td><%= buddy.comment %></td>
-      <td><%= link_to 'Show', buddy_path(buddy) %></td>
-      <td><%= link_to 'Edit', edit_buddy_path(buddy) %></td>
-      <td><%= link_to 'Destroy',
+      <td><%= buddy.comment %>
+      <br>
+      <%= link_to 'Show', buddy_path(buddy) %>
+      <br>
+      <%= link_to 'Edit', edit_buddy_path(buddy) %>
+      <br>
+      <%= link_to 'Destroy',
                              buddy_path(buddy),
                              method: :delete,
-                             data: { confirm: 'Are you sure? :(' } %></td>
+                             data: { confirm: 'Are you sure? :(' } %>
+      </td>
+      
     </tr>
   <% end %>
 </table>
+</div>

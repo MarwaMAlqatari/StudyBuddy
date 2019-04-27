@@ -1,3 +1,339 @@
 // Place all the styles related to the Buddies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #3aaf80;
+}
+
+//FOR CREATING NEW BUDDY
+.new_wrapper>h1{
+    color: #ffffff;
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-align:center;
+    
+    text-shadow: 2px 3px #172a29;
+}
+
+.new_wrapper>p{
+    font-family: 'Raleway';
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    width: 80%;
+}
+
+
+.new_wrapper>#intro{
+    padding-top:10px;
+    padding-bottom: 3px;
+    font-size: 24px;
+    font-weight: 500;
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#note{
+    font-size: 21px;
+    font-weight: 500;
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new_wrapper>form{
+    background:#ffffff;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+.imp{
+    font-family:'Roboto', sans-serif;
+    font-size:22px;
+    padding-top:5px;
+    padding-bottom:4px;
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    margin-left:15px;
+    font-family: 'Raleway';
+    text-align: right;
+    font-style: oblique;
+}
+
+input[type=text], textarea, select {
+    margin-left:15px;
+    margin-bottom:8px;
+    width: 95%;
+    
+    border: 2px solid #588c6c;
+    border-radius: 5px; 
+    height:20px;
+    
+    background-color: #c2f9e3;
+    font-size:13px;
+}
+
+select{
+    background-color:#9ee2c7;
+    font-size:13px;
+    height:25px;
+}
+
+.new_wrapper input[type=submit] {
+    background-color:#ceedc7;
+    border-radius: 12px;
+    width: 300px;
+    height: 60px;
+    border: none;
+    box-shadow: -5px 2px;
+    
+    font-family:'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.new_wrapper input[type=submit]:hover {
+    background-color:#1aa56b;
+    border-radius: 12px;
+    width: 300px;
+    height: 60px;
+    border: none;
+    
+    font-family:'Roboto', sans-serif;
+    font-style:oblique;
+    color:white;
+    letter-spacing: 2px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.section{
+    background-color:#f2f2f2;
+    border-radius: 13px; 
+}
+
+#placement{
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#back {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 10px;
+    margin-bottom:25px;
+}
+
+#back a{
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 30px;
+    font-style:oblique;
+    letter-spacing: 2px;
+    
+    color: white;
+    text-decoration: none;
+    
+}
+
+#back a:hover{
+    color:#f4f4f4; 
+    text-shadow: 2px 3px #172a29;
+    
+    text-decoration:none; 
+    cursor:pointer; 
+}
+
+#footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background-color:#ffffff;
+    text-align: center;
+    border-radius: 60px 60px 0px 0px;
+    
+    padding:2px;
+    font-family: 'Raleway';
+}
+
+//FOR LISTING ALREADY CREATED BUDDIES
+.list_wrapper>h1{
+    color: #ffffff;
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-align:center;
+    
+    text-shadow: 2px 3px #172a29;
+}
+
+.list_wrapper>#create_link{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    
+    background-color:#f2f2f2;
+    border-radius: 13px; 
+    width: 30%;
+}
+
+#create_link a{
+    color: #b8860b;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#create_link a:hover{
+    color: #b8860b;
+    font-style:oblique;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+//based on tutorial from https://css-tricks.com/complete-guide-table-element/
+table {
+  font-family: 'Arial';
+  background-color: white;
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #6b6b6b;
+  tr {
+     &:hover {
+      background: #f4f4f4;
+      
+      td {
+        color: #555;
+      }
+    }
+  }
+  th, td {
+    color: #2d2d2d;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+  }
+  th {
+    background: #0f6646;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+.w{
+    width:400px;
+}
+
+table a{
+    color: #b8860b;
+    font-style:oblique;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+table a:hover{
+    color: #b8860b;
+    font-style:oblique;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+//FOR SHOWING ALREADY-EXISTING BUDDY
+.show_wrapper>h1{
+    color: #ffffff;
+    font-family: 'Raleway Black', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-align:center;
+    
+    text-shadow: 2px 3px #172a29;
+}
+
+#about_buddy {
+    background:#ffffff;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+strong{
+    margin-left:15px;
+    padding: 12px 7px 0px 25px;
+    font-family: 'Raleway';
+    font-size: 20px;
+    text-align: right;
+    font-style: oblique;
+    letter-spacing: 1px;
+}
+
+.show_wrapper p{
+    font-family:'Roboto', sans-serif;
+    font-size:19px;
+}
+
+strong, p{
+    padding-top:5px;
+    padding-bottom:4px;
+}
+
+.show_wrapper #list {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: auto;
+    
+    margin-top: -50%;
+}
+
+.show_wrapper a{
+    font-family: 'Raleway Black', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    padding-bottom: 2px;
+    font-style: oblique;
+    
+    color: #42594a;
+}
+
+.show_wrapper a:hover{
+    font-family: 'Raleway Black', sans-serif;
+    letter-spacing: 1px;
+    font-size: 30px;
+    padding-bottom: 2px;
+    font-style: oblique;
+    
+    color: #42594a;
+    text-shadow: -2.5px 0px #b4c1b7;
+}

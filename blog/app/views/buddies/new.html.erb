@@ -1,14 +1,22 @@
-<h1>New Buddy</h1>
-
+<div class="new_wrapper">
+<h1>Create your Buddy profile</h1>
+        
+    <p id="intro">Please, enter information to share with your potential studdy buddy</p>
+    <p id='note'>For privacy purpose, potential studdy buddies will see only first letter of last name</p>
+    <br>
+    
 	<%= form_for :buddy, url: buddies_path do |f| %>
 	
+	    
+	    <p class="imp">Please, enter your personal information:</p>
+	    <div class="section">
 	    <p>
-	    	<%= f.label :fname %><br>
+	    	<%= f.label :fname, 'First Name' %><br>
 	    	<%= f.text_field :fname %>
 	    </p>
-	    
+	   
 	    <p>
-	    	<%= f.label :lname %><br>
+	    	<%= f.label :lname, 'Last Name' %><br>
 	    	<%= f.text_area :lname %>
 	    </p>
 	    
@@ -21,52 +29,72 @@
         	<%= f.label :gender %><br>
         	<%= f.select :gender, ['Male', 'Female', 'Other'] %>
         </p>
+        </div>
         
+        <br>
+        
+        <p class="imp">Please, enter information about your class</p>
+        <div class="section">
         <p>
-	        <%= f.label :class_name %><br>
+	        <%= f.label :class_name, 'Choose name and number of your class' %><br>
         	<%= f.select :class_name, ['ITSC'] %>
         </p>
         
+        <p>
             <%= f.label :class_num %> <br>
             <%= f.select :class_num, ['1212'] %> 
+        </p>
         
         <p>
-        	<%= f.label :section_num %><br>
+        	<%= f.label :section_num, 'Please, choose section of your class' %><br>
         	<%= f.select :section_num, ['101', '123', '140', '151'] %> <br>
         </p>
         
         <p>
         	
-        	<%= f.label :topic_1212 %><br>
+        	<%= f.label :topic_1212, 'What topic you would like to learn about?' %><br>
         	<%= f.select :topic_1212, ['Accessors', 'Expressions', 'Arrays', 
 			             'Boolean', 'Class Structure', 'Loops', 'Flowcharts',
 				     'Method calling', 'Scanner and Random generators', 'Switch', 'String methods', 'Method classification (main, static, void, etc)' ] %> <br>
         </p>
+        </div>
         
+        <br>
+        <p class="imp">Please, enter information about your availability</p>
+        <div class="section">
          <p>
-            <%= f.label :availability %><br>
+            <%= f.label :availability, "Choose the best day you'll be available to study" %><br>
             <%= f.select :availability, ['Monday', 'Tuesday', 'Wednesday', 
 			             'Thursday', 'Friday', 'Saturday','Sunday' ] %> <br>
          </p>
          
         <p>
-            <%= f.label :time %><br>
+            <%= f.label :time, "Choose the best time" %><br>
             <%= f.select :time, ['7:00AM-8:00AM', '8:00AM-9:00AM', '9:00AM-10:00AM', 
 			             '10:00AM-11:00AM', '11:00AM-12:00AM', '12:00AM-1:00PM','1:00PM-2:00PM','2:00PM-3:00PM', '3:00PM-4:00PM', '4:00PM-5:00PM', 
 			             '5:00PM-6:00PM', '6:00PM-7:00PM', '7:00PM-8:00PM','8:00PM-9:00PM' ] %> <br>
          </p>
         
         <p>
-            <%= f.label :comment %><br>
+            <%= f.label :comment, "Leave comment to your potential studdy buddy!" %><br>
             <%= f.text_area :comment %>
          </p>
+        </div>
 
 
-
-	    <p>
+	    <div id="placement">
 	    	<%= f.submit %>
-	    </p>
+	    </div>
 	    
 
 	<% end %>
+	<div id="back">
 	<%= link_to 'Back', buddies_path %>
+	</div>
+	
+	<div id="footer">
+            <p>Created by Sahiti Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>
+    </div>
+        
+</div>
+	

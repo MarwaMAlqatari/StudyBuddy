@@ -42,5 +42,5 @@ end
 
 private
     def buddy_params
-        params.require(:buddy).permit(:fname,:lname,:email,:gender,:class_name,:class_num,:section_num,:topic_1212,:availability,:time,:comm)
+        params.require(:buddy).permit(:fname,:lname,:email,:gender,:class_name,:class_num,:section_num,:topic_1212,:availability,:time,:comment)
     end
