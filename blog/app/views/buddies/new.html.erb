@@ -1,4 +1,24 @@
-<div class="new_wrapper">
+<body>
+    <!-- HEADER for Clearence bundle-->
+    <header>
+        <% if signed_in? %>
+          Signed in as: <%= current_user.email %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign in', sign_in_path %>
+        <% end %>
+    </header>
+    
+    <!-- For Clearence bundle -->
+    <section>
+        <div id="flash">
+          <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+    </div>
+    </section>
+    
+    <div class="new_wrapper">
 <h1>Create your Buddy profile</h1>
         
     <p id="intro">Please, enter information to share with your potential studdy buddy</p>
@@ -97,4 +117,7 @@
     </div>
         
 </div>
+    
+</body>
+
 	

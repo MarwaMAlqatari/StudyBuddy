@@ -9,10 +9,24 @@
 
 <body>
   
-    <!-- HEADER -->
+    <!-- HEADER for Clearence bundle-->
     <header>
-<!--            nothing-->
+        <% if signed_in? %>
+          Signed in as: <%= current_user.email %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign in', sign_in_path %>
+        <% end %>
     </header>
+    
+    <!-- For Clearence bundle -->
+    <section>
+        <div id="flash">
+          <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+    </div>
+    </section>
     
     <main>
          <!-- BODY -->
@@ -35,6 +49,7 @@
             
             <div class="btn">
             <%= button_to "Click Here to Start", buddies_path, :id => "big_button", :method => :get %>
+          
             </div>
         </div>
     </main>
