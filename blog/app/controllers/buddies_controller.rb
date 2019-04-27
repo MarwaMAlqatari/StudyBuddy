@@ -30,7 +30,7 @@ class BuddiesController < ApplicationController
 
     def create
         @buddy = Buddy.new(buddy_params)
-        
+        @buddy.email = current_user.email
        if @buddy.save
           
              redirect_to @buddy
@@ -42,5 +42,5 @@ end
 
 private
     def buddy_params
-        params.require(:buddy).permit(:fname,:lname,:email,:gender,:class_name,:class_num,:section_num,:topic_1212,:availability,:time,:comment)
+        params.require(:buddy).permit(:fname,:lname,:gender,:class_name,:class_num,:section_num,:topic_1212,:availability,:time,:comment)
     end
