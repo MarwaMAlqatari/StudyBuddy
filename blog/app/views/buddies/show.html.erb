@@ -1,4 +1,24 @@
-<div class="show_wrapper">
+<body>
+    
+    <header>
+        <% if signed_in? %>
+          Signed in as: <%= current_user.email %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign in', sign_in_path %>
+        <% end %>
+    </header>
+    
+    <!-- For Clearence bundle -->
+    <section>
+        <div id="flash">
+          <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+    </div>
+    </section>
+    
+    <div class="show_wrapper">
 <h1>Information about Studdy Buddy!</h1>
 <div id="about_buddy">
 <br>
@@ -112,7 +132,7 @@
 
 
 </div>
+    
+    
+</body>
 
-<!--<div id="footer">-->
-<!--            <p>Created by Sahithi Meduri, Marwa Alqatari and Julia Poliakova for ITSC 3155 - 102 </p>-->
-<!--</div>-->
