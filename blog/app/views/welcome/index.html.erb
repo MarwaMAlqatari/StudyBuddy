@@ -47,10 +47,23 @@
                 <br>
             </div>
             
-            <div class="btn">
-            <%= button_to "Click Here to Start", buddies_path, :id => "big_button", :method => :get %>
-          
-            </div>
+            <!-- HEADER for Clearence bundle-->
+    <div class="btn">
+        <% if signed_in? %>
+          Signed in as: <%= current_user.email %>
+       <%= button_to "Click Here to Start", buddies_path, :id => "big_button", :method => :get %>
+        <% else %>
+          <%= link_to 'Sign in', sign_in_path, :id => "big_button" %>
+        <% end %>
+    </div>
+    
+            <section>
+        <div id="flash">
+          <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+    </div>
+    </section>
         </div>
     </main>
     
