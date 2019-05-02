@@ -33,30 +33,3 @@
     margin-right: auto;
 }
 
-#post input[type=submit] {
-    background-color:#ceedc7;
-    border-radius: 12px;
-    width: 250px;
-    height: 50px;
-    border: none;
-    box-shadow: -5px 2px;
-    
-    font-family:'Roboto', sans-serif;
-    letter-spacing: 2px;
-    font-size: 25px;
-}
-
-#post input[type=submit]:hover {
-    background-color:#1aa56b;
-    border-radius: 12px;
-    width: 250px;
-    height: 50px;
-    border: none;
-    
-    font-family:'Roboto', sans-serif;
-    font-style:oblique;
-    color:white;
-    letter-spacing: 2px;
-    font-size: 25px;
-    cursor: pointer;
-}
